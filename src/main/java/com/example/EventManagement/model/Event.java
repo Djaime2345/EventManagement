@@ -43,6 +43,7 @@ public class Event {
     }
 
     public void deleteUser(String mail) {
-        this.userRegisters.removeIf(user -> user.getMail().equals(mail));
+        this.userRegisters.removeIf(user -> user.getMail().equalsIgnoreCase(mail));
+        System.out.println(this.userRegisters.toString());
     }
 }

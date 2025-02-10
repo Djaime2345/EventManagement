@@ -15,8 +15,8 @@ public class EventService {
     private Long nextUserId = 1L;
 
     public EventService(){
-        events.add(new Event(nextEventId++, "Event 1"));
-        events.add(new Event(nextEventId++, "Event 2"));
+        events.add(new Event(nextEventId++, "Event1"));
+        events.add(new Event(nextEventId++, "Event2"));
     }
     public List<Event> getAllEvents(){
         return events;

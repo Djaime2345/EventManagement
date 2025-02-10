@@ -34,7 +34,7 @@ public class EventController {
 
     @DeleteMapping
     @ResponseStatus(HttpStatus.OK)
-    public Event cancelRegistration(@Valid @RequestBody String email){
-        return this.cancelRegistration(email);
+    public Event cancelRegistration(@Valid @RequestBody String email, String eventName){
+        return this.eventService.unregisterUser(email, eventName);
     }
 }
